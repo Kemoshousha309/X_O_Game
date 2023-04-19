@@ -1,0 +1,17 @@
+{
+  "name": "x_o_game",
+  "version": "1.0.0",
+  "description": "X_O demo game",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "game",
+    "demo"
+  ],
+  "author": "Kareem Shousha",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}

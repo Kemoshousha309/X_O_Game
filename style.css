@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Raleway:ital,wght@0,200;0,300;0,400;1,100;1,200&display=swap");
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62%;
+  font-family: "Open Sans", sans-serif;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  position: relative;
+}
+.game-background {
+  position: relative;
+}
+.main-head {
+  font-size: 5rem;
+  color: #2e2d2d;
+  text-transform: uppercase;
+  font-weight: 200;
+  text-align: center;
+  margin: 4rem;
+}
+
+.game-turn {
+  text-align: center;
+  font-size: 4rem;
+  margin: 4rem;
+}
+
+.result {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 200;
+}
+
+.game-board {
+  position: relative;
+  height: min(80vh, 45rem);
+  width: min(85%, 60rem);
+  margin: auto;
+  margin-bottom: 10rem;
+  --border-color: #616060;
+}
+.boxes {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.boxes div {
+  font-size: 9rem;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.controls {
+  width: fit-content;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 200px);
+  background-color: white;
+  transition: all 0.3s;
+  z-index: 2;
+}
+
+.stick {
+  text-align: center;
+}
+.inputControl {
+  margin: 1.5rem;
+}
+
+.inputControl input {
+  margin: 0 1rem;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 4px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.inputControl input:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+.inputControl:last-child {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.inputControl:last-child button {
+  margin: 0 1rem;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #21252944;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+}
+#click {
+  width: 100%;
+  height: 3rem;
+  border: none;
+}
+
+#click:hover {
+  background-color: #959da5;
+  transition: all 0.3s;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--border-color);
+  position: absolute;
+  display: none;
+}
+
+#line1 {
+  top: 15%;
+}
+#line2 {
+  top: 50%;
+}
+#line3 {
+  top: 80%;
+}
+#line4,
+#line5,
+#line6 {
+  height: 100%;
+  width: 2px;
+  top: 0;
+}
+#line4 {
+  left: 16.5%;
+}
+#line5 {
+  left: 49.5%;
+}
+#line6 {
+  left: 83%;
+}
+
+#line7 {
+  height: 148%;
+  width: 2px;
+  transform: rotate(-52deg)translate(64rem, -10rem);
+}
+#line8 {
+  height: 148%;
+  width: 2px;
+  transform: rotate(53deg)translate(-27rem, -60rem);
+}
+/* CSS */
+.button {
+  appearance: none;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.button:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.button:disabled {
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959da5;
+  cursor: default;
+}
+
+.button:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+#box-1 {
+  border-right: solid 2px var(--border-color);
+  border-bottom: solid 2px var(--border-color);
+}
+
+#box-2 {
+  border-right: solid 2px var(--border-color);
+  border-bottom: solid 2px var(--border-color);
+}
+
+#box-3 {
+  border-bottom: solid 2px var(--border-color);
+}
+
+#box-4 {
+  border-right: solid 2px var(--border-color);
+  border-bottom: solid 2px var(--border-color);
+}
+#box-5 {
+  border-right: solid 2px var(--border-color);
+  border-bottom: solid 2px var(--border-color);
+}
+
+#box-6 {
+  border-bottom: solid 2px var(--border-color);
+}
+#box-7 {
+  border-right: solid 2px var(--border-color);
+}
+#box-8 {
+  border-right: solid 2px var(--border-color);
+}
+#box-9 {
+}

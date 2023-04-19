@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X_O Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-background">
+      <h1 class="main-head">X_O Game</h1>
+      <div class="game-turn">Turn: <span id="player-name"></span></div>
+      <h1 class="result"></h1>
+      <div class="game-board">
+        <div class="boxes">
+          <div id="box-1"></div>
+          <div id="box-2"></div>
+          <div id="box-3"></div>
+          <div id="box-4"></div>
+          <div id="box-5"></div>
+          <div id="box-6"></div>
+          <div id="box-7"></div>
+          <div id="box-8"></div>
+          <div id="box-9"></div>
+        </div>
+        <!-- lines -->
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
+        <div class="line" id="line4"></div>
+        <div class="line" id="line5"></div>
+        <div class="line" id="line6"></div>
+        <div class="line" id="line7"></div>
+        <div class="line" id="line8"></div>
+      </div>
+      <div class="controls">
+        <form>
+          <div class="inputControl">
+            <label for="player1">Player 1</label>
+            <input required id="player1" type="text" />
+          </div>
+          <div class="inputControl">
+            <label for="player2">Player 2</label>
+            <input required id="player2" type="text" />
+          </div>
+          <div class="inputControl">
+            <button id="play" class="button">play</button>
+            <button id="reset" class="button">reset</button>
+          </div>
+        </form>
+        <button id="click"></button>
+      </div>
+      <div class="backdrop"></div>
+    </div>
+    -->
+
+    <script type="module" src="src/controller.js"></script>
+  </body>
+</html>
